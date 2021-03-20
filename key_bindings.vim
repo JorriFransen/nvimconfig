@@ -7,6 +7,10 @@ noremap <leader>k :wincmd k<CR>
 noremap <leader>wv :vsplit<cr>
 noremap <leader>ws :split<cr>
 
+" Stay in visual mode after indenting
+vnoremap < <gv
+vnoremap > >gv
+
 "" Move window to a new tab
 noremap <leader>tt :wincmd T<CR>
 
