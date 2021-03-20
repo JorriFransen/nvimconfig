@@ -8,7 +8,8 @@ call plug#begin('~/.config/nvim/plugged')
 
     " Lsp
     Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
+    Plug 'nvim-lua/completion-nvim'
+    " Plug 'hrsh7th/nvim-compe'
 
     " Syntax
     Plug 'octol/vim-cpp-enhanced-highlight'
