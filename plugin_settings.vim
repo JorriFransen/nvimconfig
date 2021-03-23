@@ -27,12 +27,7 @@ inoremap {<CR> {<CR>}<Esc>O
 " Lsp
 luafile $CONFIG_LSPCONFIG
 
-
-
-"" completion-lsp
-" The next line is replaced by some code in $CONFIG_LSPCONFIG included above
-" lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
-"
+" completion-nvim
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -41,7 +36,5 @@ set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
 set shortmess+=c
 let g:completion_sorting = "length"
-" let g:completion_matching_strategy_list = ['fuzzy', 'exact', 'substring', 'all']
-let g:completion_matching_strategy_list = ['fuzzy', 'exact', 'substring' ]
+let g:completion_matching_strategy_list = ['fuzzy', 'substring', 'exact']
 let g:completion_matching_smart_case = 1
-

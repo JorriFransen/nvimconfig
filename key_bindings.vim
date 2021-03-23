@@ -79,7 +79,3 @@ nnoremap <leader>en :cn<cr>
 nnoremap <C-j> :cn<cr>
 nnoremap <leader>ep :cp<cr>
 nnoremap <C-k> :cp<cr>
-
-"" Lsp
-" lspconfig
-nnoremap ,ga :ClangdSwitchSourceHeader<cr>
