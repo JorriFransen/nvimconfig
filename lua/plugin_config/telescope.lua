@@ -1,3 +1,4 @@
+local util = require("util")
 local actions = require('telescope.actions')
 
 require('telescope').load_extension('fzy_native')
@@ -34,3 +35,12 @@ require('telescope').setup{
         }
     }
 }
+
+-- Telescope
+util.nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
+util.nnoremap("<leader>pf", "<cmd>Telescope git_files<cr>")
+util.nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
+util.nnoremap("<leader>bb", "<cmd>Telescope buffers<cr>")
+util.nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>")
+util.nnoremap("<leader>tb", "<cmd>Telescope builtin<cr>")
+

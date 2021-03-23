@@ -50,4 +50,5 @@ end
 
 nvim_lsp.clangd.setup { on_attach = attach_clangd }
 
-
+local util = require("util")
+util.noremap(",ga", ":ClangdSwitchSourceHeader<CR>")

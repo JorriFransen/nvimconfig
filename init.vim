@@ -21,7 +21,6 @@ let $RTP=split(&runtimepath, ',')[0]
 let $CONFIG_MAIN=join([$RTP, "/init.vim"], "")
 let $CONFIG_BINDINGS=join([$RTP, "/key_bindings.vim"], "")
 let $CONFIG_PLUGINS=join([$RTP, "/plugin_definitions.vim"], "")
-let $CONFIG_PLUGIN_SETTINGS=join([$RTP, "/plugin_settings.vim"], "")
 let $CONFIG_TELESCOPE=join([$RTP, "/telescope.lua"], "")
 let $CONFIG_LSPCONFIG=join([$RTP, "/lspconfig.lua"], "")
 
@@ -31,13 +30,11 @@ let mapleader = "\<Space>"
 no <leader>cc :e $CONFIG_MAIN<CR>
 no <leader>ck :e $CONFIG_BINDINGS<CR>
 no <leader>cpd :e $CONFIG_PLUGINS<CR>
-no <leader>cps :e $CONFIG_PLUGIN_SETTINGS<CR>
 no <leader>ct :e $CONFIG_TELESCOPE<CR>
 no <leader>cl :e $CONFIG_LSPCONFIG<CR>
 
-source $CONFIG_PLUGIN_SETTINGS
-
-source $CONFIG_BINDINGS
+lua require("plugin_config")
+lua require("key_bindings")
 
 " Color scheme
 set background=dark

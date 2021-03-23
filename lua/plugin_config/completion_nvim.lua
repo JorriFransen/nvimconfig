@@ -1,9 +1,9 @@
 
+local util = require('util')
+
 -- Map tab and shift-tab
-vim.api.nvim_set_keymap("i", "<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]],
-                        { noremap = true, expr = true })
-vim.api.nvim_set_keymap("i", "<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]],
-                        { noremap = true, expr = true })
+util.inoremap("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
+util.inoremap("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { expr = true })
 
 vim.o.completeopt="menuone,noinsert,noselect"
 vim.o.shortmess=vim.o.shortmess.."c"
