@@ -45,7 +45,7 @@ local attach_clangd = function(client, bufnr)
     ]], false)
   end
 
-  require'completion'.on_attach()
+  require('completion').on_attach()
 end
 
 nvim_lsp.clangd.setup { on_attach = attach_clangd }
