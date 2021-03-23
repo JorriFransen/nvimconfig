@@ -1,8 +1,3 @@
-" Nerd commenter
-let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDCustomDelimiters = { 'zdc': { 'left': '//','right': '' } }
-let g:NERDCreateDefaultMappings = 0
 
 " Airline
 let g:airline_theme='onedark'
