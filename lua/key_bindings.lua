@@ -88,3 +88,6 @@ util.nnoremap("<leader>en", ":cn<cr>")
 util.nnoremap("<C-j>", ":cn<cr>")
 util.nnoremap("<leader>ep", ":cp<cr>")
 util.nnoremap("<C-k>", ":cp<cr>")
+
+
+util.nnoremap("<leader>hh", ":lua toggle_search_highlight()<CR>")

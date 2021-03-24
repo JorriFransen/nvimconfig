@@ -1,5 +1,6 @@
 
 local M = {}
+M.string = {}
 
 local function check_options(options)
     if options == nil then
@@ -46,6 +47,23 @@ end
 function M.vnoremap(lhs, rhs, options)
     options = check_options(options)
     M._noremap("v", lhs, rhs, options)
+end
+
+function M.string.split(in_str, sep)
+    if sep == nil then
+        sep = "%s"
+    end
+
+    local t = {}
+    for str in string.gmatch(in_str, "([^"..sep.."]+)") do
+        table.insert(t, str)
+    end
+
+    return t
+end
+
+function _G.toggle_search_highlight()
+    vim.o.hlsearch = not vim.o.hlsearch
 end
 
 
