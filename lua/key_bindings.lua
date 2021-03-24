@@ -22,11 +22,10 @@ util.noremap("<leader>tl", ":tabn<CR>")
 util.noremap("<leader>tn", ":tabn<CR>")
 util.noremap("<leader>tq", ":tabc<CR>")
 
-
 -- Buffer navigation
-util.noremap("<leader>bb", ":buffer<Space>")
+util.noremap("<leader>b", ":buffer<Space>")
 
-function executor()
+function Executor()
     local ft = vim.bo.filetype
 
     local line_nr = vim.api.nvim_win_get_cursor(0)[1]
@@ -41,9 +40,9 @@ function executor()
         error("Unsupported filetype: '" .. ft .. "'", 3)
     end
 end
-util.nnoremap("<leader>x", ":lua executor()<CR>")
+util.nnoremap("<leader>x", ":lua Executor()<CR>")
 
-function source_current_buffer()
+function Source_current_buffer()
     local ft = vim.bo.filetype
 
     vim.cmd("silent! write")
@@ -55,18 +54,18 @@ function source_current_buffer()
         error("Unsupported filetype: '" .. ft .. "'", 3)
     end
 end
-util.nnoremap("<leader>r", ":lua source_current_buffer()<CR>")
+util.nnoremap("<leader>r", ":lua Source_current_buffer()<CR>")
 
 
 -- Compilation
 util.nnoremap("<F5>", ":call Compile()<CR>")
 util.inoremap("<F5>", "<esc>: call Compile()<CR>")
 
-function toggle_quickfix()
+function Toggle_quickfix()
     local wininfos = vim.api.nvim_eval("getwininfo()")
 
     local quickfix_open = false
-    for i,v in ipairs(wininfos) do
+    for i,_ in ipairs(wininfos) do
         if wininfos[i].quickfix ~= 0 then
             quickfix_open = true
             break
@@ -82,7 +81,7 @@ function toggle_quickfix()
     end
 end
 
-util.nnoremap("<leader>cd", ":lua toggle_quickfix()<CR>")
+util.nnoremap("<leader>cd", ":lua Toggle_quickfix()<CR>")
 
 -- Quickfix
 util.nnoremap("<leader>en", ":cn<cr>")

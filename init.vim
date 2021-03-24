@@ -34,6 +34,7 @@ no <leader>ct :e $CONFIG_TELESCOPE<CR>
 no <leader>cl :e $CONFIG_LSPCONFIG<CR>
 
 lua require("plugin_config")
+lua require("ls_config")
 lua require("key_bindings")
 
 " Color scheme

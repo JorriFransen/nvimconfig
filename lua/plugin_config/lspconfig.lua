@@ -1,6 +1,9 @@
--- lspconfig
-local nvim_lsp = require('lspconfig')
-local attach_clangd = function(client, bufnr)
+local completion = require("completion")
+local nvim_lsp = require("lspconfig")
+
+local M = {}
+
+function M.attach_lsp(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -45,10 +48,7 @@ local attach_clangd = function(client, bufnr)
     ]], false)
   end
 
-  require('completion').on_attach()
+  completion.on_attach()
 end
 
-nvim_lsp.clangd.setup { on_attach = attach_clangd }
-
-local util = require("util")
-util.noremap(",ga", ":ClangdSwitchSourceHeader<CR>")
+return M
