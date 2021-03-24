@@ -12,15 +12,20 @@ local function check_options(options)
     return options
 end
 
-function M.map(mode, lhs, rhs, options)
+function M._map(mode, lhs, rhs, options)
     options = check_options(options)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+function M.map(lhs, rhs, options)
+    options = check_options(options)
+    M._map("", lhs, rhs, options)
 end
 
 function M._noremap(mode, lhs, rhs, options)
     options = check_options(options)
     options.noremap = true
-    M.map(mode, lhs, rhs, options)
+    M._map(mode, lhs, rhs, options)
 end
 
 function M.noremap(lhs, rhs, options)
