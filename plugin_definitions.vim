@@ -25,6 +25,9 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+    " Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate' }
+
     " Theming
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
