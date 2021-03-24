@@ -3,6 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
     " Asyncrun
     Plug 'skywind3000/asyncrun.vim'
 
+    " Barbar
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'romgrk/barbar.nvim'
+
     " Delimate
     Plug 'Raimondi/delimitMate'
 
