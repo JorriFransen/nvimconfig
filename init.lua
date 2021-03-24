@@ -22,7 +22,7 @@ vim.o.splitright = true
 local RTP = util.string.split(vim.o.runtimepath, ",")[1]
 local CONFIG_MAIN = RTP .. "/init.lua"
 local CONFIG_BINDINGS = RTP .. "/lua/key_bindings.lua"
-local CONFIG_PLUGINS = RTP .. "/plugin_definitions.vim"
+local CONFIG_PLUGINS = RTP .. "/lua/plugin_definitions.lua"
 
 vim.g.mapleader = ' '
 
@@ -30,8 +30,7 @@ util.noremap("<leader>cc", ":e " ..  CONFIG_MAIN .. "<CR>")
 util.noremap("<leader>ck", ":e " .. CONFIG_BINDINGS .. "<CR>")
 util.noremap("<leader>cpd", ":e " .. CONFIG_PLUGINS .. "<CR>")
 
-vim.cmd("source " .. CONFIG_PLUGINS)
-
+require("plugin_definitions")
 require("plugin_config")
 require("ls_config")
 require("key_bindings")
