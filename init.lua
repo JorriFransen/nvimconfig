@@ -37,4 +37,5 @@ require("key_bindings")
 
 vim.o.background = "dark"
 vim.o.termguicolors = true
-vim.cmd("colorscheme nvcode")
+vim.cmd("colorscheme gruvbox")
+
