@@ -9,49 +9,49 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require("packer").startup(function(use)
-    use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim'
 
-    -- Asyncrun
-    use 'skywind3000/asyncrun.vim'
+  -- Asyncrun
+  use 'skywind3000/asyncrun.vim'
 
-    -- Barbar
-    use 'kyazdani42/nvim-web-devicons'
-    use 'romgrk/barbar.nvim'
+  -- Barbar
+  use 'kyazdani42/nvim-web-devicons'
+  use 'romgrk/barbar.nvim'
 
-    -- Delimate
-    use 'Raimondi/delimitMate'
+  -- Delimate
+  use 'Raimondi/delimitMate'
 
-    -- Lsp
-    use 'neovim/nvim-lspconfig'
-    use { 'JorriFransen/completion-nvim', branch = 'feature/syntax_highlighting_in_signature_window' }
-    -- use '~/dev/completion-nvim'
-    -- use 'nvim-lua/completion-nvim'
+  -- Lsp
+  use 'neovim/nvim-lspconfig'
+  use { 'JorriFransen/completion-nvim', branch = 'feature/syntax_highlighting_in_signature_window' }
+  -- use '~/dev/completion-nvim'
+  -- use 'nvim-lua/completion-nvim'
 
-    -- Syntax
-    use 'octol/vim-cpp-enhanced-highlight'
+  -- Syntax
+  use 'octol/vim-cpp-enhanced-highlight'
 
-    -- Telescope
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-fzy-native.nvim'
+  -- Telescope
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-fzy-native.nvim'
 
-    -- Fzf
-    use 'junegunn/fzf.vim'
-    use {
-      'junegunn/fzf',
-      run = ":call fzf#install()",
-    }
+  -- Fzf
+  use 'junegunn/fzf.vim'
+  use {
+    'junegunn/fzf',
+    run = ":call fzf#install()",
+  }
 
-    -- Treesitter
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    -- Theming
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
-    use 'ChristianChiarulli/nvcode-color-schemes.vim'
-    use 'morhetz/gruvbox'
+  -- Theming
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+  use 'ChristianChiarulli/nvcode-color-schemes.vim'
+  use 'morhetz/gruvbox'
 
-    -- Util
-    use 'preservim/nerdcommenter'
+  -- Util
+  use 'preservim/nerdcommenter'
 end)
