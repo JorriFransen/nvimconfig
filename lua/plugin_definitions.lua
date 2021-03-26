@@ -36,6 +36,13 @@ return require("packer").startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-fzy-native.nvim'
 
+    -- Fzf
+    use 'junegunn/fzf.vim'
+    use {
+      'junegunn/fzf',
+      run = ":call fzf#install()",
+    }
+
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
