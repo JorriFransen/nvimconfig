@@ -1,6 +1,8 @@
 
 local util = require("util")
 
+vim.o.timeoutlen=400
+
 vim.o.backspace = "start,eol,indent"
 vim.o.hlsearch = true
 vim.o.ignorecase = true

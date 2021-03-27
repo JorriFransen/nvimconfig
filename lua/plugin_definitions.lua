@@ -53,6 +53,7 @@ return require("packer").startup(function(use)
 
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-startify'
+  use 'liuchengxu/vim-which-key'
 
   -- Util
   use 'preservim/nerdcommenter'
