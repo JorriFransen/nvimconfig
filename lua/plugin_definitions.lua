@@ -51,6 +51,9 @@ return require("packer").startup(function(use)
   use 'rafikdraoui/gruvbox-custom'
   use 'rafikdraoui/couleurs.vim'
 
+  use 'tpope/vim-fugitive'
+  use 'mhinz/vim-startify'
+
   -- Util
   use 'preservim/nerdcommenter'
 end)
