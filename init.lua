@@ -11,9 +11,9 @@ vim.o.clipboard = "unnamedplus"
 vim.o.mouse = "a"
 vim.wo.number = true
 
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
-vim.bo.expandtab = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
 
 vim.o.hidden = true
 vim.o.splitbelow = true
