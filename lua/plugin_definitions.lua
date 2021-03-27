@@ -27,9 +27,6 @@ return require("packer").startup(function(use)
   -- use '~/dev/completion-nvim'
   -- use 'nvim-lua/completion-nvim'
 
-  -- Syntax
-  use 'octol/vim-cpp-enhanced-highlight'
-
   -- Telescope
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
@@ -50,7 +47,9 @@ return require("packer").startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
-  use 'morhetz/gruvbox'
+  use 'morhetz/gruvbox' -- Using this for the airline theme
+  use 'rafikdraoui/gruvbox-custom'
+  use 'rafikdraoui/couleurs.vim'
 
   -- Util
   use 'preservim/nerdcommenter'

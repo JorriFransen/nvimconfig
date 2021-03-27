@@ -1,5 +1,6 @@
--- vim.g.airline_theme="onedark"
-vim.g.airline_theme="gruvbox"
+-- This is set in the main init.lua file
+-- vim.g.airline_theme="gruvbox"
+
 vim.g.airline_powerline_fonts=1
 vim.g.airline_left_sep = ""
 vim.g.airline_right_sep = ""
