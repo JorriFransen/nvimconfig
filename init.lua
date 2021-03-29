@@ -42,3 +42,4 @@ vim.o.termguicolors = true
 vim.cmd("colorscheme couleurs")
 vim.g.airline_theme = "gruvbox"
 
+vim.cmd[[ autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp ]]
