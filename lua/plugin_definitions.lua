@@ -47,6 +47,7 @@ return require("packer").startup(function(use)
 
   -- Theming
   use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
   use 'morhetz/gruvbox' -- Using this for the airline theme
   use 'rafikdraoui/couleurs.vim'
