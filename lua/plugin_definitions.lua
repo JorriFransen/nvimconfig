@@ -8,6 +8,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute('packadd packer.nvim')
 end
 
+vim.cmd('let base16colorspace=256')
+
 return require("packer").startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -48,8 +50,8 @@ return require("packer").startup(function(use)
   use 'vim-airline/vim-airline-themes'
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
   use 'morhetz/gruvbox' -- Using this for the airline theme
-  use 'rafikdraoui/gruvbox-custom'
   use 'rafikdraoui/couleurs.vim'
+  use 'chriskempson/base16-vim'
 
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-startify'

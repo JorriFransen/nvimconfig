@@ -40,4 +40,6 @@ require("key_bindings")
 vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.cmd("colorscheme couleurs")
-vim.g.airline_theme = "gruvbox"
+-- vim.g.airline_theme = "base16_gruvbox_dark_hard"
+vim.g.airline_theme = "lucius"
+
