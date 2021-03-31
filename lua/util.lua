@@ -49,6 +49,11 @@ function M.vnoremap(lhs, rhs, options)
   M._noremap("v", lhs, rhs, options)
 end
 
+function M.tnoremap(lhs, rhs, options)
+  options = check_options(options)
+  M._noremap("t", lhs, rhs, options)
+end
+
 function M.string.split(in_str, sep)
   if sep == nil then
       sep = "%s"

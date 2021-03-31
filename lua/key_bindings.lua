@@ -13,19 +13,17 @@ util.noremap("<leader>ws", ":split<cr>")
 util.noremap("<leader>tt", ":wincmd T<CR>")
 
 -- Open a terminal window
-util.noremap("<leader>T", ":terminal<CR>")
+util.noremap("<leader>T", ":tabe | terminal<CR>")
 
 -- Stay in visual mode after indenting
 util.vnoremap("<", "<gv")
 util.vnoremap(">", ">gv")
 
 -- Tab navigation
-util.noremap("<leader>th", ":tabp<CR>")
-util.noremap("<leader>tp", ":tabp<CR>")
-util.noremap("<leader>tl", ":tabn<CR>")
-util.noremap("<leader>tn", ":tabn<CR>")
-util.noremap("<leader>tq", ":tabc<CR>")
-util.noremap("<leader>tc", ":tabe<CR>")
+util.noremap("<C-h>", ":tabp<CR>")
+util.noremap("<C-l>", ":tabn<CR>")
+util.tnoremap("<C-h>", "<C-\\><C-n>:tabp<CR>")
+util.tnoremap("<C-l>", "<C-\\><C-n>:tabn<CR>")
 
 -- Buffer navigation
 util.noremap("<leader>b", ":buffer<Space>")
