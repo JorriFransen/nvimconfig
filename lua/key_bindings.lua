@@ -8,8 +8,12 @@ util.noremap("<leader>j", ":wincmd j<CR>")
 util.noremap("<leader>k", ":wincmd k<CR>")
 util.noremap("<leader>wv", ":vsplit<cr>")
 util.noremap("<leader>ws", ":split<cr>")
+
 -- Move window to a new tab
 util.noremap("<leader>tt", ":wincmd T<CR>")
+
+-- Open a terminal window
+util.noremap("<leader>T", ":terminal<CR>")
 
 -- Stay in visual mode after indenting
 util.vnoremap("<", "<gv")
