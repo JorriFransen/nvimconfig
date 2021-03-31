@@ -21,6 +21,7 @@ util.noremap("<leader>tp", ":tabp<CR>")
 util.noremap("<leader>tl", ":tabn<CR>")
 util.noremap("<leader>tn", ":tabn<CR>")
 util.noremap("<leader>tq", ":tabc<CR>")
+util.noremap("<leader>tc", ":tabe<CR>")
 
 -- Buffer navigation
 util.noremap("<leader>b", ":buffer<Space>")

@@ -29,11 +29,7 @@ return require("packer").startup(function(use)
   -- use '~/dev/completion-nvim'
   -- use 'nvim-lua/completion-nvim'
 
-  -- Telescope
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'rhysd/vim-llvm'
 
   -- Fzf
   use 'junegunn/fzf.vim'
@@ -51,6 +47,7 @@ return require("packer").startup(function(use)
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
   use 'morhetz/gruvbox' -- Using this for the airline theme
   use 'rafikdraoui/couleurs.vim'
+  use 'chriskempson/base16-vim'
 
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-startify'
