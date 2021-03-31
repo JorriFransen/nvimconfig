@@ -50,7 +50,6 @@ return require("packer").startup(function(use)
   use 'chriskempson/base16-vim'
 
   use 'tpope/vim-fugitive'
-  use 'mhinz/vim-startify'
   use 'liuchengxu/vim-which-key'
 
   -- Util
