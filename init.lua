@@ -8,21 +8,24 @@ vim.o.hlsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.wildmenu = true
-vim.wo.cursorline = true
 vim.o.clipboard = "unnamedplus"
 vim.o.mouse = "a"
-vim.wo.number = true
 
-vim.bo.shiftwidth = 4
-vim.bo.tabstop = 4
-vim.bo.expandtab = true
+vim.wo.cursorline = true
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.wo.colorcolumn = "80"
+vim.o.scrolloff=5
+vim.o.splitbelow = true
+vim.o.splitright = true
+
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true
 
 vim.o.hidden = true
-vim.o.splitbelow = true
-vim.o.splitright = true
+vim.o.swapfile = false
+vim.o.undofile = true
 
 local RTP = util.string.split(vim.o.runtimepath, ",")[1]
 local CONFIG_MAIN = RTP .. "/init.lua"
@@ -42,7 +45,26 @@ require("key_bindings")
 
 vim.o.background = "dark"
 vim.o.termguicolors = true
-vim.cmd("colorscheme couleurs")
-vim.g.airline_theme = "gruvbox"
 
-vim.cmd[[ autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp ]]
+-- vim.cmd("colorscheme nvcode")
+-- vim.g.airline_theme = "deus"
+
+vim.g.gruvbox_contrast_dark="hard"
+vim.g.gruvbox_bold = 0
+vim.g.gruvbox_italic = 0
+vim.cmd("colorscheme gruvbox")
+vim.g.airline_theme = "gruvbox" --[[ gruvbox/couleurs ]]--
+
+vim.api.nvim_exec([[
+  augroup my_auto_group
+    autocmd!
+
+    " This needs to be an autocmd, since the colorscheme does not seem to be
+    "  loaded yet when this line executes.
+    autocmd vimenter * hi Normal guibg=none
+
+    autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
+
+    "autocmd BufWritePre * call TrimWhiteSpace()
+  augroup end
+]], false)

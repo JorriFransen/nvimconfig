@@ -25,7 +25,10 @@ return require("packer").startup(function(use)
 
   -- Lsp
   use 'neovim/nvim-lspconfig'
-  use { 'JorriFransen/completion-nvim', branch = 'feature/syntax_highlighting_in_signature_window' }
+  use {
+    'JorriFransen/completion-nvim',
+    branch = 'feature/syntax_highlighting_in_signature_window'
+  }
   -- use '~/dev/completion-nvim'
   -- use 'nvim-lua/completion-nvim'
 
@@ -45,13 +48,14 @@ return require("packer").startup(function(use)
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ChristianChiarulli/nvcode-color-schemes.vim'
-  use 'morhetz/gruvbox' -- Using this for the airline theme
+  use 'gruvbox-community/gruvbox'
   use 'rafikdraoui/couleurs.vim'
-  use 'chriskempson/base16-vim'
 
   use 'tpope/vim-fugitive'
   use 'liuchengxu/vim-which-key'
 
   -- Util
   use 'preservim/nerdcommenter'
+  use 'mbbill/undotree'
+
 end)
