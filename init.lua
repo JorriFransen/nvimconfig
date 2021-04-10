@@ -59,9 +59,7 @@ vim.api.nvim_exec([[
   augroup my_auto_group
     autocmd!
 
-    " This needs to be an autocmd, since the colorscheme does not seem to be
-    "  loaded yet when this line executes.
-    autocmd vimenter * hi Normal guibg=none
+    autocmd vimenter * :lua _G.toggle_background_transparency()
 
     autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
 

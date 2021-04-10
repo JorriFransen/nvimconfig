@@ -120,4 +120,18 @@ function _G.execute_current_line()
   end
 end
 
+M.background_is_transparent = false
+M.background_color = ""
+
+function _G.toggle_background_transparency()
+  if M.background_is_transparent then
+    M.background_is_transparent = false
+    vim.cmd("hi Normal guibg=" .. M.background_color)
+  else
+    M.background_color = vim.api.nvim_eval[[ synIDattr(hlID("Normal"), "bg") ]]
+    M.background_is_transparent = true
+    vim.cmd [[ hi Normal guibg=none ]]
+  end
+end
+
 return M

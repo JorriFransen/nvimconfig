@@ -44,4 +44,9 @@ util.nnoremap("<leader>ep", ":cp<cr>")
 util.nnoremap("<C-k>", ":cp<cr>")
 
 -- Toggle search highlight
-util.nnoremap("<leader>thh", ":lua toggle_search_highlight()<CR>", { silent = true })
+util.nnoremap("<leader>thh", ":lua toggle_search_highlight()<CR>",
+              { silent = true })
+
+-- Toggle background transparency
+util.nnoremap("<leader>tb", ":lua toggle_background_transparency()<CR>",
+              { silent = true})
