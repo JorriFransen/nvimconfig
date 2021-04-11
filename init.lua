@@ -46,6 +46,14 @@ require("key_bindings")
 vim.o.background = "dark"
 vim.o.termguicolors = true
 
+
+if vim.g.gnvim then
+  vim.o.guifont = "FuraCode NF:h11"
+  util.background_is_transparent_initially = false
+else
+  vim.o.guifont = "FuraCode NF:h14"
+end
+
 -- vim.cmd("colorscheme nvcode")
 -- vim.g.airline_theme = "deus"
 
@@ -59,7 +67,7 @@ vim.api.nvim_exec([[
   augroup my_auto_group
     autocmd!
 
-    autocmd vimenter * :lua _G.toggle_background_transparency()
+    autocmd vimenter * :lua _G.initialize_background_transparency()
 
     autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
 

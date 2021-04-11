@@ -57,5 +57,6 @@ return require("packer").startup(function(use)
   -- Util
   use 'preservim/nerdcommenter'
   use 'mbbill/undotree'
+  use 'psliwka/vim-smoothie'
 
 end)
