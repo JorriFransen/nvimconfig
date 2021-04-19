@@ -52,7 +52,6 @@ return require("packer").startup(function(use)
   use 'rafikdraoui/couleurs.vim'
 
   use 'tpope/vim-fugitive'
-  use 'liuchengxu/vim-which-key'
 
   -- Util
   use 'preservim/nerdcommenter'

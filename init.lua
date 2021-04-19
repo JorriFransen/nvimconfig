@@ -61,7 +61,7 @@ vim.g.gruvbox_contrast_dark="hard"
 vim.g.gruvbox_bold = 0
 vim.g.gruvbox_italic = 0
 vim.cmd("colorscheme gruvbox")
-vim.g.airline_theme = "gruvbox" --[[ gruvbox/couleurs ]]--
+vim.g.airline_theme = "gruvbox" -- gruvbox/couleurs
 
 vim.api.nvim_exec([[
   augroup my_auto_group
