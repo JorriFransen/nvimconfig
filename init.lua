@@ -19,9 +19,9 @@ vim.o.scrolloff=5
 vim.o.splitbelow = true
 vim.o.splitright = true
 
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
-vim.o.expandtab = true
+vim.bo.shiftwidth = 4
+vim.bo.tabstop = 4
+vim.bo.expandtab = true
 
 vim.o.hidden = true
 vim.o.swapfile = false
