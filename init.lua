@@ -63,11 +63,14 @@ vim.g.gruvbox_italic = 0
 vim.cmd("colorscheme gruvbox")
 vim.g.airline_theme = "gruvbox" -- gruvbox/couleurs
 
+-- vim.cmd("colorscheme solarized")
+-- vim.g.airline_theme = "solarized"
+
 vim.api.nvim_exec([[
   augroup my_auto_group
     autocmd!
 
-    autocmd vimenter * :lua _G.initialize_background_transparency()
+    "autocmd vimenter * :lua _G.initialize_background_transparency()
 
     autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
 
