@@ -54,6 +54,8 @@ return require("packer").startup(function(use)
 
   use 'tpope/vim-fugitive'
 
+  use 'puremourning/vimspector'
+
   -- Util
   use 'preservim/nerdcommenter'
   use 'mbbill/undotree'

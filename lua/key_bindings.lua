@@ -31,7 +31,7 @@ util.noremap("<leader>b", ":buffer<Space>")
 util.nnoremap("<leader>x", ":lua execute_current_line()<CR>")
 util.nnoremap("<leader>r", ":lua source_current_buffer()<CR>")
 
--- Compilation
+-- Comkilation
 util.nnoremap("<F5>", ":call Compile()<CR>")
 util.inoremap("<F5>", "<esc>: call Compile()<CR>")
 
