@@ -25,12 +25,8 @@ return require("packer").startup(function(use)
 
   -- Lsp
   use 'neovim/nvim-lspconfig'
-  use {
-    'JorriFransen/completion-nvim',
-    branch = 'feature/syntax_highlighting_in_signature_window'
-  }
   -- use '~/dev/completion-nvim'
-  -- use 'nvim-lua/completion-nvim'
+  use 'nvim-lua/completion-nvim'
 
   use 'rhysd/vim-llvm'
 
