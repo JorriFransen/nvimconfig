@@ -31,7 +31,7 @@ util.noremap("<leader>b", ":buffer<Space>")
 util.nnoremap("<leader>x", ":lua execute_current_line()<CR>")
 util.nnoremap("<leader>r", ":lua source_current_buffer()<CR>")
 
--- Comkilation
+-- Compilation
 util.nnoremap("<F5>", ":call Compile()<CR>")
 util.inoremap("<F5>", "<esc>: call Compile()<CR>")
 
@@ -45,8 +45,12 @@ util.nnoremap("<C-k>", ":cp<cr>")
 
 -- Toggle search highlight
 util.nnoremap("<leader>thh", ":lua toggle_search_highlight()<CR>",
-              { silent = true })
+              { silent = true } )
 
 -- Toggle background transparency
 util.nnoremap("<leader>tb", ":lua toggle_background_transparency()<CR>",
-              { silent = true})
+              { silent = true} )
+
+-- Misc
+util.nnoremap("<leader>wq", ":lua wqa_if_in_diff_mode()<CR>",
+              { silent = true } )

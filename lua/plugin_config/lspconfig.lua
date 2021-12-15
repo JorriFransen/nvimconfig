@@ -1,4 +1,4 @@
-local completion = require("completion")
+-- local completion = require("completion")
 
 local M = {}
 
@@ -10,7 +10,7 @@ function M.attach_lsp(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lspomnisharp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
@@ -40,7 +40,7 @@ function M.attach_lsp(client, bufnr)
     ]], false)
   end
 
-  completion.on_attach()
+  -- completion.on_attach()
 end
 
 return M

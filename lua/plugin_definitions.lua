@@ -25,8 +25,9 @@ return require("packer").startup(function(use)
 
   -- Lsp
   use 'neovim/nvim-lspconfig'
-  -- use '~/dev/completion-nvim'
-  use 'nvim-lua/completion-nvim'
+  -- use 'nvim-lua/completion-nvim'
+  -- use 'Omnisharp/omnisharp-vim'
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
   use 'rhysd/vim-llvm'
 
@@ -38,7 +39,7 @@ return require("packer").startup(function(use)
   }
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Theming
   use 'vim-airline/vim-airline'

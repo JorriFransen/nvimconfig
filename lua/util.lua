@@ -141,4 +141,10 @@ function _G.initialize_background_transparency()
   end
 end
 
+function _G.wqa_if_in_diff_mode()
+  if vim.o.diff then
+    vim.cmd [[ wqa! ]]
+  end
+end
+
 return M

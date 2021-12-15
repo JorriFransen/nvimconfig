@@ -26,6 +26,10 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 vim.o.hidden = true
 vim.o.swapfile = false
 vim.o.undofile = true
@@ -46,37 +50,39 @@ require("plugin_config")
 require("ls_config")
 require("key_bindings")
 
-vim.o.background = "dark"
-vim.o.termguicolors = true
-
-
 if vim.g.gnvim then
-  vim.o.guifont = "FuraCode NF:h11"
+  vim.o.guifont = "FiraCode NF:h11"
   util.background_is_transparent_initially = false
 else
-  vim.o.guifont = "FuraCode NF:h14"
+  -- vim.o.guifont = "FuraCode NF:h14"
 end
 
--- vim.cmd("colorscheme nvcode")
--- vim.g.airline_theme = "deus"
+if not vim.g.vscode then
+  -- vim.cmd("colorscheme nvcode")
+  -- vim.g.airline_theme = "deus"
 
-vim.g.gruvbox_contrast_dark="hard"
-vim.g.gruvbox_bold = 0
-vim.g.gruvbox_italic = 0
-vim.cmd("colorscheme gruvbox")
-vim.g.airline_theme = "gruvbox" -- gruvbox/couleurs
+  -- vim.o.background = "light"
+  vim.o.background = "dark"
+  vim.o.termguicolors = true
 
--- vim.cmd("colorscheme solarized")
--- vim.g.airline_theme = "solarized"
+  vim.g.gruvbox_contrast_dark="medium"
+  vim.g.gruvbox_bold = 0
+  vim.g.gruvbox_italic = 0
+  vim.cmd("colorscheme gruvbox")
+  vim.g.airline_theme = "gruvbox" -- gruvbox/couleurs
 
-vim.api.nvim_exec([[
-  augroup my_auto_group
-    autocmd!
+  -- vim.cmd("colorscheme solarized")
+  -- vim.g.airline_theme = "solarized"
 
-    "autocmd vimenter * :lua _G.initialize_background_transparency()
+  vim.api.nvim_exec([[
+    augroup my_auto_group
+      autocmd!
 
-    autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
+      "autocmd vimenter * :lua _G.initialize_background_transparency()
 
-    "autocmd BufWritePre * call TrimWhiteSpace()
-  augroup end
-]], false)
+      autocmd BufNewFile,BufRead *.zdc set filetype=zdc | set syntax=cpp
+
+      "autocmd BufWritePre * call TrimWhiteSpace()
+    augroup end
+  ]], false)
+end
