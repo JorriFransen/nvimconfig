@@ -40,6 +40,8 @@ return require("packer").startup(function(use)
 
   -- Treesitter
   -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- use { 'bfrg/vim-cpp-modern' }
+  use { 'octol/vim-cpp-enhanced-highlight' }
 
   -- Theming
   use 'vim-airline/vim-airline'
